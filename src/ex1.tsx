@@ -17,7 +17,7 @@ export class NotWrokingSubmitButton extends React.Component {
   render() {
     return (
       <div>
-        <h2>Failure 1</h2>
+        <h2>Fix a crash</h2>
         <p>This button should change the submit state but it doesn't work.</p>
         <p>Try to fix it so it will display the right state of the form.</p>
         <p>Submit state is: {(this.state as any).isFormSubmitted.toString()}</p>

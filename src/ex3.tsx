@@ -1,6 +1,7 @@
 import * as React from "react";
 
 interface Book {
+  id: string;
   name: string;
   author: Author;
 }
@@ -9,15 +10,15 @@ interface Author {
   address: string;
 }
 
-const Address = ({ address }) => {
-  return <div>{address}</div>;
+const AddressComp = ({ address }) => {
+  return <div style={{ fontStyle: "italic" }}>@: {address}</div>;
 };
 
-const Author = ({ author }) => {
+const AuthorComp = ({ author }) => {
   return (
     <div>
-      {author.name} is the writer, living at
-      <Address address={author.address} />
+      By: {author.name}
+      <AddressComp address={author.address} />
     </div>
   );
 };
@@ -27,14 +28,18 @@ export const Library: React.FunctionComponent<{ books: Array<Book> }> = ({
 }) => {
   return (
     <div>
-      <h2>Failure 3</h2>
+      <h2>Improve my library</h2>
       <p>Welcome to my simple library.</p>
-      <p>It is working fine but has a bit complex implementation.</p>
+      <p>
+        1. The current design use props drilling, can you avoid it and suggest
+        alternative implementation?
+      </p>
+      <p>2. Can you improve the UI?</p>
       {books.map((b, i) => {
         return (
           <li key={i}>
-            {b.name}
-            <Author author={b.author} />
+            <div style={{ fontWeight: "bold" }}>{b.name}</div>
+            <AuthorComp author={b.author} />
           </li>
         );
       })}

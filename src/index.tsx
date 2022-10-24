@@ -28,16 +28,22 @@ class App extends React.Component<AppProps, AppState> {
         <hr />
         <CountSecrets />
         <hr />
+        <BVForm />
+        <hr />
         <Library
           books={[
             {
+              id: "0078e171-20e7-42a1-a6fc-cd33b4dfa664",
               name: "Name of the rose",
               author: { name: "Umberto Eco", address: "Italy" }
+            },
+            {
+              id: "0078e171-20e7-42a1-a6fc-cd33b4dfa665",
+              name: "The Client",
+              author: { name: "John Grisham", address: "USA" }
             }
           ]}
         />
-        <hr />
-        <BVForm />
       </div>
     );
   }

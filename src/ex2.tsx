@@ -18,7 +18,7 @@ export function CountSecrets() {
 
   return (
     <div>
-      <h2>Failure 2</h2>
+      <h2>Endless...</h2>
       <p>This simple login form check count each valid user login.</p>
       <p>But when a user type a valid password somthing wrong happen.</p>
       <p>Example of a valid password is "secret", try it out.</p>
