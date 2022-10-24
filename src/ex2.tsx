@@ -1,13 +1,15 @@
-import { useEffect, useState } from 'react';
-import React = require('react');
-
+import { useEffect, useState } from "react";
+import * as React from "react";
+const login = (pass: string) => {
+  return pass === "secret";
+};
 export function CountSecrets() {
-  const [secret, setSecret] = useState({ value: '', countSecrets: 0 });
+  const [secret, setSecret] = useState({ value: "", countSecrets: 0 });
 
   useEffect(() => {
-    if (secret.value === 'secret') {
+    /* eslint-disable */
+    login("secret") &&
       setSecret({ ...secret, countSecrets: secret.countSecrets + 1 });
-    }
   }, [secret]);
 
   const onChange = ({ target }) => {
@@ -16,19 +18,20 @@ export function CountSecrets() {
 
   return (
     <div>
+      <h2>Failure 2</h2>
+      <p>This simple login form check count each valid user login.</p>
+      <p>But when a user type a valid password somthing wrong happen.</p>
+      <p>Example of a valid password is "secret", try it out.</p>
       <p>
-        This simple login form check for the right password and increase the
-        counter.
+        Try to fix the form so it will count each time that a user type a valid
+        password
       </p>
-      <p>
-        When you type "secret" (as the right password) somthing wrong happen,
-        try it out
-      </p>
-      <br />
       <br />
       <p>Password:</p>
       <input type="text" value={secret.value} onChange={onChange} />
-      <div>Number of secrets: {secret.countSecrets}</div>
+      <p>
+        <div>Number of valid login: {secret.countSecrets}</div>
+      </p>
     </div>
   );
 }

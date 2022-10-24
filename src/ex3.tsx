@@ -1,4 +1,4 @@
-import React = require('react');
+import * as React from "react";
 
 interface Book {
   name: string;
@@ -23,10 +23,11 @@ const Author = ({ author }) => {
 };
 
 export const Library: React.FunctionComponent<{ books: Array<Book> }> = ({
-  books,
+  books
 }) => {
   return (
     <div>
+      <h2>Failure 3</h2>
       <p>Welcome to my simple library.</p>
       <p>It is working fine but has a bit complex implementation.</p>
       {books.map((b, i) => {
