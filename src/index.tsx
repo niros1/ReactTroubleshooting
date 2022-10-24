@@ -28,7 +28,6 @@ class App extends React.Component<AppProps, AppState> {
         <hr />
         <CountSecrets />
         <hr />
-
         <Library
           books={[
             {
@@ -38,7 +37,6 @@ class App extends React.Component<AppProps, AppState> {
           ]}
         />
         <hr />
-
         <BVForm />
       </div>
     );

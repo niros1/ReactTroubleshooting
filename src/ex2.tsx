@@ -8,7 +8,7 @@ export function CountSecrets() {
 
   useEffect(() => {
     /* eslint-disable */
-    login("secret") &&
+    login(secret.value) &&
       setSecret({ ...secret, countSecrets: secret.countSecrets + 1 });
   }, [secret]);
 
