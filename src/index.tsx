@@ -8,6 +8,10 @@ import { BVForm } from "./ex4";
 // import Hello from "./Hello";
 import "./style.css";
 
+import { Code } from "../src/code";
+
+let code = new Code("Test Message!!");
+
 interface AppProps {}
 interface AppState {
   name: string;
