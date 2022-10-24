@@ -29,9 +29,10 @@ export function CountSecrets() {
       <br />
       <p>Password:</p>
       <input type="text" value={secret.value} onChange={onChange} />
-      <p>
-        <div>Number of valid login: {secret.countSecrets}</div>
-      </p>
+
+      <div>
+        <p>Number of valid login: {secret.countSecrets}</p>
+      </div>
     </div>
   );
 }

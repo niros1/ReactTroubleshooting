@@ -2,22 +2,22 @@
   "name": "troubleshooting-challange",
   "version": "0.0.0",
   "private": true,
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.tsx"
+  },
   "dependencies": {
     "@babel/runtime": "7.19.4",
+    "@types/jest": "29.2.0",
     "@types/react": "^16.8.2",
     "@types/react-dom": "^16.8.0",
+    "jest": "29.2.1",
     "react": "^16.8.0",
+    "react-addons-test-utils": "15.6.2",
     "react-dom": "^16.8.0"
   },
-  "scripts": {
-    "start": "react-scripts-ts start",
-    "build": "react-scripts-ts build",
-    "test": "react-scripts-ts test --env=jsdom",
-    "eject": "react-scripts-ts eject"
-  },
   "devDependencies": {
-    "react-scripts-ts": "latest"
-  },
-  "keywords": [],
-  "description": ""
+    "parcel-bundler": "^1.6.1"
+  }
 }
